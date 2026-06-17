@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome &middot; Event Registration{% endblock %}
+
+{% block content %}
+<div class="px-4 py-5 my-3 text-center">
+    <h1 class="display-5 fw-bold">Secure Event Registration</h1>
+    <div class="col-lg-7 mx-auto">
+        <p class="lead mb-4">
+            Browse upcoming events and reserve your spot. Administrators manage events;
+            registered users manage their own bookings.
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            <a href="{% url 'accounts:login' %}" class="btn btn-primary btn-lg px-4 gap-3">Login</a>
+            <a href="{% url 'accounts:register' %}" class="btn btn-outline-secondary btn-lg px-4">Register</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
