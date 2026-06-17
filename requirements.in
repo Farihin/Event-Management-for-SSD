@@ -1,0 +1,22 @@
+# Top-level dependencies (intent). Compile to a fully-pinned requirements.txt with:
+#   pip-compile requirements.in -o requirements.txt
+# Scan for known vulnerabilities with:
+#   pip-audit -r requirements.txt --strict --desc
+
+Django>=5.2,<5.3        # LTS; supports Python 3.11 (Django 6.0 needs 3.12+)
+argon2-cffi             # enables Argon2id password hasher (OWASP-preferred)
+django-axes             # brute-force lockout + login attempt logging
+django-environ          # load secrets/config from .env
+django-csp              # Content-Security-Policy headers (v4 dict API)
+Pillow                  # image upload content validation (Image.verify)
+
+# --- local HTTPS dev server ---
+django-extensions       # runserver_plus
+Werkzeug>=3.1.6         # runserver_plus dep (3.1.6+ patches CVEs; run WITHOUT --noreload)
+pyOpenSSL               # TLS cert support for runserver_plus
+
+# --- static file serving (production, DEBUG=False) ---
+whitenoise              # serve static files from the app so custom error pages render
+
+# --- security tooling (dev) ---
+pip-audit               # dependency vulnerability scanning

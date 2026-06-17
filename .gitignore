@@ -1,0 +1,33 @@
+# Secrets & local environment
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Django
+db.sqlite3
+db.sqlite3-journal
+/staticfiles/
+
+# Uploaded media (stored outside static root; never committed)
+/private_media/*
+!/private_media/.gitkeep
+
+# Local TLS certificates (self-signed dev certs)
+/certs/
+
+# Logs
+/logs/*.log
+!/logs/.gitkeep
+
+# OS / IDE
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
