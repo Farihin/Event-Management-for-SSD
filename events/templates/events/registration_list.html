@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}My Registrations{% endblock %}
+{% block content %}
+<h1 class="h3 mb-3">My Registrations</h1>
+
+<div class="table-responsive">
+    <table class="table align-middle">
+        <thead>
+        <tr>
+            <th>Event</th>
+            <th>When</th>
+            <th>Status</th>
+            <th>Registered on</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for reg in registrations %}
+            <tr>
+                <td><a href="{% url 'events:detail' reg.event.pk %}">{{ reg.event.title }}</a></td>
+                <td>{{ reg.event.start_at|date:"M d, Y H:i" }}</td>
+                <td>
+                    {% if reg.status == "confirmed" %}
+                        <span class="badge bg-success">Confirmed</span>
+                    {% else %}
+                        <span class="badge bg-secondary">Cancelled</span>
+                    {% endif %}
+                </td>
+                <td>{{ reg.created_at|date:"M d, Y" }}</td>
+                <td class="text-end">
+                    {% if reg.status == "confirmed" %}
+                        <form method="post" action="{% url 'events:cancel' reg.pk %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-sm btn-outline-danger">Cancel</button>
+                        </form>
+                    {% endif %}
+                </td>
+            </tr>
+        {% empty %}
+            <tr><td colspan="5" class="text-center text-muted">You have no registrations yet.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% if is_paginated %}
+<nav>
+    <ul class="pagination">
+        {% if page_obj.has_previous %}
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a></li>
+        {% endif %}
+        <li class="page-item disabled"><span class="page-link">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span></li>
+        {% if page_obj.has_next %}
+            <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+{% endblock %}

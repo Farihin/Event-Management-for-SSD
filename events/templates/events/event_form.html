@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{% if form.instance.pk %}Edit event{% else %}New event{% endif %}{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h1 class="h4 mb-3">
+                    {% if form.instance.pk %}Edit event{% else %}Create event{% endif %}
+                </h1>
+                {# multipart/form-data required for the banner upload. #}
+                <form method="post" enctype="multipart/form-data" novalidate>
+                    {% csrf_token %}
+                    {% include "partials/_form.html" %}
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <a href="{% url 'events:list' %}" class="btn btn-outline-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
