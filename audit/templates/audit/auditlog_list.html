@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Audit Log{% endblock %}
+
+{% block content %}
+<h1 class="h3 mb-3">Audit Log</h1>
+
+<form method="get" class="row g-2 mb-3">
+    <div class="col-auto">
+        <select name="action" class="form-select">
+            <option value="">All actions</option>
+            {% for value, label in action_choices %}
+                <option value="{{ value }}" {% if value == current_action %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="col-auto">
+        <input type="text" name="actor" value="{{ current_actor }}" class="form-control"
+               placeholder="Filter by username" maxlength="30">
+    </div>
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Filter</button>
+        <a href="{% url 'audit:list' %}" class="btn btn-outline-secondary">Reset</a>
+    </div>
+</form>
+
+<div class="table-responsive">
+    <table class="table table-sm table-striped align-middle">
+        <thead>
+        <tr>
+            <th>Time (GMT+8)</th>
+            <th>Action</th>
+            <th>Actor</th>
+            <th>Success</th>
+            <th>IP</th>
+            <th>Target</th>
+            <th>Message</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for log in logs %}
+            <tr>
+                <td class="text-nowrap">{{ log.timestamp|date:"Y-m-d H:i:s" }}</td>
+                <td>{{ log.get_action_display }}</td>
+                <td>{{ log.actor.username|default:"—" }}</td>
+                <td>
+                    {% if log.success %}
+                        <span class="badge bg-success">yes</span>
+                    {% else %}
+                        <span class="badge bg-danger">no</span>
+                    {% endif %}
+                </td>
+                <td>{{ log.ip_address|default:"—" }}</td>
+                <td>{{ log.target_repr|default:"—" }}</td>
+                <td>{{ log.message }}</td>
+            </tr>
+        {% empty %}
+            <tr><td colspan="7" class="text-center text-muted">No log entries.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% if is_paginated %}
+<nav>
+    <ul class="pagination">
+        {% if page_obj.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?action={{ current_action }}&actor={{ current_actor }}&page={{ page_obj.previous_page_number }}">Previous</a>
+            </li>
+        {% endif %}
+        <li class="page-item disabled">
+            <span class="page-link">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+        </li>
+        {% if page_obj.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?action={{ current_action }}&actor={{ current_actor }}&page={{ page_obj.next_page_number }}">Next</a>
+            </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+{% endblock %}
