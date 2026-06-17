@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}My Profile{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h1 class="h4 mb-3">My Profile</h1>
+
+                <dl class="row mb-3">
+                    <dt class="col-sm-3">Username</dt>
+                    <dd class="col-sm-9">{{ user.username }}</dd>
+                    <dt class="col-sm-3">Role</dt>
+                    <dd class="col-sm-9">{{ user.get_role_display }}</dd>
+                </dl>
+
+                {% if user.avatar %}
+                    <img src="{{ user.avatar.url }}" alt="avatar" class="rounded mb-3" width="96" height="96">
+                {% endif %}
+
+                {# multipart/form-data is required for the avatar upload. #}
+                <form method="post" enctype="multipart/form-data" novalidate>
+                    {% csrf_token %}
+                    {% include "partials/_form.html" %}
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
