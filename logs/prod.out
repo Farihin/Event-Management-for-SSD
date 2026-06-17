@@ -1,0 +1,42 @@
+INFO AXES: BEGIN version 8.3.1, blocking by combination of ip_address and username
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on https://127.0.0.1:8000
+Press CTRL+C to quit
+ * Restarting with stat
+INFO AXES: BEGIN version 8.3.1, blocking by combination of ip_address and username
+ * Debugger is active!
+ * Debugger PIN: 108-900-016
+127.0.0.1 - - [08/Jun/2026 13:52:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 13:52:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 13:52:49] "GET /accounts/login/ HTTP/1.1" 200 -
+INFO AXES: Successful login by {username: "********************", ip_address: "********************", user_agent: "Mozilla/5.0 (Windows NT 10.0; Microsoft Windows 10.0.26100; en-MY) PowerShell/7.6.1", path_info: "/accounts/login/"}.
+INFO AXES: Cleaned up 0 expired access attempts from database that were older than 2026-06-08 05:22:49.453399+00:00
+INFO AXES: Reset 0 access attempts from database.
+INFO AXES: Deleted 0 failed login attempts by {username: "********************", ip_address: "********************", user_agent: "Mozilla/5.0 (Windows NT 10.0; Microsoft Windows 10.0.26100; en-MY) PowerShell/7.6.1", path_info: "/accounts/login/"} from database.
+INFO action=login_success actor=admin (Administrator) target= success=True ip=202.184.110.123
+127.0.0.1 - - [08/Jun/2026 13:52:49] "POST /accounts/login/ HTTP/1.1" 302 -
+127.0.0.1 - - [08/Jun/2026 13:52:49] "GET /events/ HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 13:52:49] "GET /audit/ HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 14:24:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 14:24:29] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [08/Jun/2026 14:24:30] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 14:24:31] "GET /accounts/login/ HTTP/1.1" 200 -
+INFO AXES: Successful login by {username: "********************", ip_address: "********************", user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36", path_info: "/accounts/login/"}.
+INFO AXES: Cleaned up 3 expired access attempts from database that were older than 2026-06-08 05:54:48.089301+00:00
+INFO AXES: Reset 0 access attempts from database.
+INFO AXES: Deleted 0 failed login attempts by {username: "********************", ip_address: "********************", user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36", path_info: "/accounts/login/"} from database.
+INFO action=login_success actor=admin (Administrator) target= success=True ip=202.184.110.123
+127.0.0.1 - - [08/Jun/2026 14:24:48] "POST /accounts/login/ HTTP/1.1" 302 -
+127.0.0.1 - - [08/Jun/2026 14:24:48] "GET /events/ HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 14:24:51] "GET /audit/ HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 14:27:27] "GET /audit/ HTTP/1.1" 302 -
+127.0.0.1 - - [08/Jun/2026 14:27:27] "GET /accounts/login/?next=/audit/ HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 15:54:05] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 15:54:06] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 15:54:06] "GET /static/css/app.css HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 15:54:06] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [08/Jun/2026 15:54:09] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 15:54:10] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 15:54:10] "GET /static/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 15:54:10] "GET /static/css/app.css HTTP/1.1" 200 -
+127.0.0.1 - - [08/Jun/2026 15:54:10] "GET /favicon.ico HTTP/1.1" 404 -

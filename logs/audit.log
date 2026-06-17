@@ -1,0 +1,77 @@
+2026-06-08 09:26:13,328 INFO audit action=login_success actor=bob (Normal User) target= success=True ip=127.0.0.1
+2026-06-08 09:26:13,605 INFO audit action=login_success actor=alice (Normal User) target= success=True ip=None
+2026-06-08 09:26:13,735 INFO audit action=login_success actor=alice (Normal User) target= success=True ip=None
+2026-06-08 09:26:13,821 INFO audit action=login_success actor=admin (Administrator) target= success=True ip=None
+2026-06-08 09:26:13,988 INFO audit action=login_success actor=user (Normal User) target= success=True ip=None
+2026-06-08 09:26:14,109 INFO audit action=login_success actor=user (Normal User) target= success=True ip=None
+2026-06-08 09:26:14,116 INFO audit action=create actor=user (Normal User) target=Test Event success=True ip=127.0.0.1
+2026-06-08 09:26:14,177 INFO audit action=login_success actor=other (Normal User) target= success=True ip=None
+2026-06-08 09:26:14,277 INFO audit action=login_success actor=user (Normal User) target= success=True ip=None
+2026-06-08 09:26:14,280 INFO audit action=create actor=user (Normal User) target=Test Event success=True ip=127.0.0.1
+2026-06-08 09:26:14,452 INFO audit action=login_success actor=viewer (Normal User) target= success=True ip=None
+2026-06-08 09:31:45,705 INFO audit action=login_success actor=admin (Administrator) target= success=True ip=127.0.0.1
+2026-06-08 09:32:11,594 INFO audit action=login_success actor=admin (Administrator) target= success=True ip=127.0.0.1
+2026-06-08 09:32:11,688 INFO audit action=login_success actor=user (Normal User) target= success=True ip=127.0.0.1
+2026-06-08 09:36:01,605 INFO audit action=login_success actor=bob (Normal User) target= success=True ip=127.0.0.1
+2026-06-08 09:36:01,904 INFO audit action=login_success actor=alice (Normal User) target= success=True ip=None
+2026-06-08 09:36:02,012 INFO audit action=login_success actor=alice (Normal User) target= success=True ip=None
+2026-06-08 09:36:02,126 INFO audit action=login_success actor=admin (Administrator) target= success=True ip=None
+2026-06-08 09:36:02,266 INFO audit action=login_success actor=user (Normal User) target= success=True ip=None
+2026-06-08 09:36:02,338 INFO audit action=login_success actor=user (Normal User) target= success=True ip=None
+2026-06-08 09:36:02,340 INFO audit action=create actor=user (Normal User) target=Test Event success=True ip=127.0.0.1
+2026-06-08 09:36:02,380 INFO audit action=login_success actor=other (Normal User) target= success=True ip=None
+2026-06-08 09:36:02,454 INFO audit action=login_success actor=user (Normal User) target= success=True ip=None
+2026-06-08 09:36:02,456 INFO audit action=create actor=user (Normal User) target=Test Event success=True ip=127.0.0.1
+2026-06-08 09:36:02,602 INFO audit action=login_success actor=viewer (Normal User) target= success=True ip=None
+2026-06-08 09:37:58,304 INFO audit action=login_success actor=bob (Normal User) target= success=True ip=127.0.0.1
+2026-06-08 09:37:58,578 INFO audit action=login_success actor=alice (Normal User) target= success=True ip=None
+2026-06-08 09:37:58,682 INFO audit action=login_success actor=alice (Normal User) target= success=True ip=None
+2026-06-08 09:37:58,788 INFO audit action=login_success actor=admin (Administrator) target= success=True ip=None
+2026-06-08 09:37:58,936 INFO audit action=login_success actor=user (Normal User) target= success=True ip=None
+2026-06-08 09:37:59,007 INFO audit action=login_success actor=user (Normal User) target= success=True ip=None
+2026-06-08 09:37:59,009 INFO audit action=create actor=user (Normal User) target=Test Event success=True ip=127.0.0.1
+2026-06-08 09:37:59,044 INFO audit action=login_success actor=other (Normal User) target= success=True ip=None
+2026-06-08 09:37:59,113 INFO audit action=login_success actor=user (Normal User) target= success=True ip=None
+2026-06-08 09:37:59,115 INFO audit action=create actor=user (Normal User) target=Test Event success=True ip=127.0.0.1
+2026-06-08 09:37:59,260 INFO audit action=login_success actor=viewer (Normal User) target= success=True ip=None
+2026-06-08 09:57:21,139 INFO audit action=login_success actor=admin (Administrator) target= success=True ip=202.184.110.123
+2026-06-08 09:59:10,457 INFO audit action=login_success actor=user (Normal User) target= success=True ip=127.0.0.1
+2026-06-08 09:59:14,109 INFO audit action=logout actor=user (Normal User) target= success=True ip=127.0.0.1
+2026-06-08 09:59:24,126 INFO audit action=login_success actor=admin (Administrator) target= success=True ip=127.0.0.1
+2026-06-08 10:10:21,961 INFO audit action=login_success actor=plainuser (Normal User) target= success=True ip=None
+2026-06-08 10:10:33,267 INFO audit action=login_success actor=bob (Normal User) target= success=True ip=127.0.0.1
+2026-06-08 10:10:33,526 INFO audit action=login_success actor=plainuser (Normal User) target= success=True ip=None
+2026-06-08 10:10:33,680 INFO audit action=login_success actor=alice (Normal User) target= success=True ip=None
+2026-06-08 10:10:33,814 INFO audit action=login_success actor=alice (Normal User) target= success=True ip=None
+2026-06-08 10:10:33,921 INFO audit action=login_success actor=admin (Administrator) target= success=True ip=None
+2026-06-08 10:10:34,090 INFO audit action=login_success actor=user (Normal User) target= success=True ip=None
+2026-06-08 10:10:34,176 INFO audit action=login_success actor=user (Normal User) target= success=True ip=None
+2026-06-08 10:10:34,185 INFO audit action=create actor=user (Normal User) target=Test Event success=True ip=127.0.0.1
+2026-06-08 10:10:34,225 INFO audit action=login_success actor=other (Normal User) target= success=True ip=None
+2026-06-08 10:10:34,301 INFO audit action=login_success actor=user (Normal User) target= success=True ip=None
+2026-06-08 10:10:34,309 INFO audit action=create actor=user (Normal User) target=Test Event success=True ip=127.0.0.1
+2026-06-08 10:10:34,459 INFO audit action=login_success actor=viewer (Normal User) target= success=True ip=None
+2026-06-08 10:14:50,704 INFO audit action=login_success actor=user (Normal User) target= success=True ip=202.184.110.123
+2026-06-08 10:15:36,382 INFO audit action=login_success actor=bob (Normal User) target= success=True ip=127.0.0.1
+2026-06-08 10:15:36,590 INFO audit action=login_success actor=plainuser (Normal User) target= success=True ip=None
+2026-06-08 10:15:36,739 INFO audit action=login_success actor=alice (Normal User) target= success=True ip=None
+2026-06-08 10:15:36,856 INFO audit action=login_success actor=alice (Normal User) target= success=True ip=None
+2026-06-08 10:15:36,959 INFO audit action=login_success actor=admin (Administrator) target= success=True ip=None
+2026-06-08 10:15:37,125 INFO audit action=login_success actor=user (Normal User) target= success=True ip=None
+2026-06-08 10:15:37,204 INFO audit action=login_success actor=user (Normal User) target= success=True ip=None
+2026-06-08 10:15:37,213 INFO audit action=create actor=user (Normal User) target=Test Event success=True ip=127.0.0.1
+2026-06-08 10:15:37,251 INFO audit action=login_success actor=other (Normal User) target= success=True ip=None
+2026-06-08 10:15:37,326 INFO audit action=login_success actor=user (Normal User) target= success=True ip=None
+2026-06-08 10:15:37,335 INFO audit action=create actor=user (Normal User) target=Test Event success=True ip=127.0.0.1
+2026-06-08 10:15:37,487 INFO audit action=login_success actor=viewer (Normal User) target= success=True ip=None
+2026-06-08 13:31:37,991 INFO audit action=login_success actor=user (Normal User) target= success=True ip=2001:f40:95a:302c:a542:a22f:9d30:d521
+2026-06-08 13:31:49,831 INFO audit action=create actor=user (Normal User) target=Capture The Flag Night success=True ip=2001:f40:95a:302c:a542:a22f:9d30:d521
+2026-06-08 13:31:55,077 INFO audit action=update actor=user (Normal User) target=user (Normal User) -> Capture The Flag Night success=True ip=2001:f40:95a:302c:a542:a22f:9d30:d521
+2026-06-08 13:32:34,163 INFO audit action=logout actor=user (Normal User) target= success=True ip=2001:f40:95a:302c:a542:a22f:9d30:d521
+2026-06-08 13:32:51,599 INFO audit action=login_success actor=admin (Administrator) target= success=True ip=2001:f40:95a:302c:a542:a22f:9d30:d521
+2026-06-08 13:46:02,027 INFO audit action=logout actor=admin (Administrator) target= success=True ip=2001:f40:95a:302c:a542:a22f:9d30:d521
+2026-06-08 13:46:55,541 INFO audit action=login_success actor=user (Normal User) target= success=True ip=2001:f40:95a:302c:a542:a22f:9d30:d521
+2026-06-08 13:47:52,469 INFO audit action=logout actor=user (Normal User) target= success=True ip=2001:f40:95a:302c:a542:a22f:9d30:d521
+2026-06-08 13:48:13,520 INFO audit action=login_success actor=admin (Administrator) target= success=True ip=2001:f40:95a:302c:a542:a22f:9d30:d521
+2026-06-08 13:52:49,555 INFO audit action=login_success actor=admin (Administrator) target= success=True ip=202.184.110.123
+2026-06-08 14:24:48,166 INFO audit action=login_success actor=admin (Administrator) target= success=True ip=202.184.110.123
