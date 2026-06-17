@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>500 Server Error</title>
+    {# Self-contained: no base.html, no DB/auth context — something is already broken. #}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+<body>
+<div class="error-page">
+    <div class="code text-danger">500</div>
+    <h1 class="h4">Something went wrong</h1>
+    <p class="text-muted">An unexpected error occurred. The team has been notified.</p>
+    <a href="/" class="btn btn-primary">Back to home</a>
+</div>
+</body>
+</html>

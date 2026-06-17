@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}400 Bad Request{% endblock %}
+{% block content %}
+<div class="error-page">
+    <div class="code text-warning">400</div>
+    <h1 class="h4">Bad request</h1>
+    <p class="text-muted">Your request could not be processed. Please check and try again.</p>
+    <a href="{% url 'core:home' %}" class="btn btn-primary">Back to home</a>
+</div>
+{% endblock %}
